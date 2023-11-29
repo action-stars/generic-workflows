@@ -14,3 +14,5 @@ jobs:
   workflow:
     name: Workflow
     uses: ./.github/workflows/dependabot-pr.yaml
+    permissions:
+      contents: write

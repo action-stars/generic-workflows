@@ -9,3 +9,5 @@ jobs:
   workflow:
     name: Workflow
     uses: ./.github/workflows/release.yaml
+    permissions:
+      contents: write
