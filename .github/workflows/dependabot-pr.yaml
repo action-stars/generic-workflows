@@ -1,0 +1,49 @@
+name: GH Reusable Workflow Dependabot PR
+
+on:
+  workflow_call:
+    inputs:
+      activation_label:
+        description: The label that will trigger the workflow.
+        type: string
+        required: false
+        default: dependencies
+      changelog_path:
+        description: Path to the CHANGELOG file; this needs to follow the Keep a Changelog pattern.
+        type: string
+        required: false
+        default: ./CHANGELOG.md
+      section_header:
+        description: The header for the section that will be added to the CHANGELOG.
+        type: string
+        required: false
+        default: Changed
+
+jobs:
+  changelog:
+    name: Changelog
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 1
+
+      - name: Update changelog
+        uses: dangoslen/dependabot-changelog-helper@15b927ce4f654cd41fb14e5a676d17414b9dbb64 # v3.7.0
+        with:
+          activationLabel: ${{ inputs.activation_label }}
+          changelogPath: ${{ inputs.changelog_path }}
+          version: UNRELEASED
+          sectionHeader: ${{ inputs.section_header }}
+          entryPrefix: Updated
+
+      - name: Update PR
+        uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d # v5.0.0
+        with:
+          commit_message: "chore: Updated Changelog"

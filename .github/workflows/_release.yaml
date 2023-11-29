@@ -1,0 +1,11 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  workflow:
+    name: Workflow
+    uses: ./.github/workflows/release.yaml

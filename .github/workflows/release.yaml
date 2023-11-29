@@ -1,0 +1,56 @@
+name: GH Reusable Workflow Publish Release
+
+on:
+  workflow_call:
+    inputs:
+      changelog_path:
+        description: Path to the CHANGELOG file; this needs to follow the Keep a Changelog pattern.
+        type: string
+        required: false
+        default: ./CHANGELOG.md
+      version:
+        description: The version to be released.
+        type: string
+        required: false
+        default: ${{ github.ref_name }}
+      make_latest:
+        description: Whether to make the release the latest release.
+        type: boolean
+        required: false
+        default: true
+      artifacts:
+        description: Comma seperated list of artifact path to be uploaded to the release; this supports globs.
+        type: string
+        required: false
+        default: ""
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 1
+
+      - name: Get changelog entry
+        id: changelog
+        uses: mindsers/changelog-reader-action@b97ce03a10d9bdbb07beb491c76a5a01d78cd3ef # v2.2.2
+        with:
+          path: ${{ inputs.changelog_path }}}
+          version: ${{ inputs.version }}
+
+      - name: Create release
+        uses: ncipollo/release-action@6c75be85e571768fa31b40abf38de58ba0397db5 # v1.13.0
+        with:
+          token: ${{ github.token }}
+          makeLatest: ${{ inputs.make_latest }}
+          allowUpdates: true
+          body: ${{ steps.changelog.outputs.changes }}
+          artifacts: ${{ inputs.artifacts }}
