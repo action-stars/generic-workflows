@@ -35,7 +35,7 @@ jobs:
           fetch-depth: 1
 
       - name: Update changelog
-        uses: dangoslen/dependabot-changelog-helper@15b927ce4f654cd41fb14e5a676d17414b9dbb64 # v3.7.0
+        uses: dangoslen/dependabot-changelog-helper@ffabc6ebe06fd7717ad1929945c8b95a4d9e7ba0 # v3.8.0
         with:
           activationLabel: ${{ inputs.activation_label }}
           changelogPath: ${{ inputs.changelog_path }}
