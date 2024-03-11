@@ -41,13 +41,13 @@ jobs:
 
       - name: Get changelog entry
         id: changelog
-        uses: mindsers/changelog-reader-action@b97ce03a10d9bdbb07beb491c76a5a01d78cd3ef # v2.2.2
+        uses: mindsers/changelog-reader-action@32aa5b4c155d76c94e4ec883a223c947b2f02656 # v2.2.3
         with:
           path: ${{ inputs.changelog_path }}
           version: ${{ inputs.version }}
 
       - name: Create release
-        uses: ncipollo/release-action@6c75be85e571768fa31b40abf38de58ba0397db5 # v1.13.0
+        uses: ncipollo/release-action@2c591bcc8ecdcd2db72b97d6147f871fcd833ba5 # v1.14.0
         with:
           token: ${{ github.token }}
           makeLatest: ${{ inputs.make_latest }}
