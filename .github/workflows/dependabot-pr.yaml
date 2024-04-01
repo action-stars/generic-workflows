@@ -30,12 +30,12 @@ jobs:
         shell: bash
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
         with:
           fetch-depth: 1
 
       - name: Update changelog
-        uses: dangoslen/dependabot-changelog-helper@ffabc6ebe06fd7717ad1929945c8b95a4d9e7ba0 # v3.8.0
+        uses: dangoslen/dependabot-changelog-helper@392b22478d34ddd54f2c51919bf40ad5590db395 # v3.9.0
         with:
           activationLabel: ${{ inputs.activation_label }}
           changelogPath: ${{ inputs.changelog_path }}
