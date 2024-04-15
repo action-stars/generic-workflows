@@ -14,6 +14,8 @@
 
 ## [UNRELEASED]
 
+## [v0.2.0] - 2024-04-15
+
 ### Added
 
 - Added support for removing unwanted wrapping links from CHANGELOG authors before writing release notes. ([#9](https://github.com/action-stars/generic-workflows/pull/7)) _@stevehipwell_
@@ -37,5 +39,6 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.1.0...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.2.0...HEAD
+[v0.2.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.2.0
 [v0.1.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.1.0
