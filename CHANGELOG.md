@@ -14,6 +14,20 @@
 
 ## [UNRELEASED]
 
+### Added
+
+- Added support for removing unwanted wrapping links from CHANGELOG authors before writing release notes. ([#9](https://github.com/action-stars/generic-workflows/pull/7)) _@stevehipwell_
+
+### Changed
+
+- Updated `actions/checkout` from `v4.1.1` to [v4.1.2](https://github.com/actions/checkout/releases/tag/v4.1.2). ([#6](https://github.com/action-stars/generic-workflows/pull/6)) _@dependabot_
+- Updated `mindsers/changelog-reader-action` from `2.2.2` to [2.2.3](https://github.com/mindsers/changelog-reader-action/releases/tag/v2.2.3). ([#6](https://github.com/action-stars/generic-workflows/pull/6)) _@dependabot_
+- Updated `ncipollo/release-action` from `1.13.0` to [1.14.0](https://github.com/ncipollo/release-action/releases/tag/v1.14.0). ([#6](https://github.com/action-stars/generic-workflows/pull/6)) _@dependabot_
+
+### Removed
+
+- Removed Dependabot PR workflow. ([#9](https://github.com/action-stars/generic-workflows/pull/7)) _@stevehipwell_
+
 ## [v0.1.0] - 2023-11-29
 
 ### Added

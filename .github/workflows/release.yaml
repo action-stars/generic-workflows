@@ -46,11 +46,26 @@ jobs:
           path: ${{ inputs.changelog_path }}
           version: ${{ inputs.version }}
 
+      - name: Release notes
+        id: release_notes
+        run: |
+          set -euo pipefail
+
+          changes='${{ steps.changelog.outputs.changes }}'
+
+          changelog="$(echo "${changes}" | sed -r 's/\[(@[^]]+)\]\([^)]+\)/\1/g')"
+
+          {
+            echo "changelog<<EOF"
+            echo "${changelog}"
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+
       - name: Create release
         uses: ncipollo/release-action@2c591bcc8ecdcd2db72b97d6147f871fcd833ba5 # v1.14.0
         with:
           token: ${{ github.token }}
           makeLatest: ${{ inputs.make_latest }}
           allowUpdates: true
-          body: ${{ steps.changelog.outputs.changes }}
+          body: ${{ steps.release_notes.outputs.changelog }}
           artifacts: ${{ inputs.artifacts }}
