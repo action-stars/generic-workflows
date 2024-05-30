@@ -14,6 +14,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Updated _actions/checkout_ from `4.1.2` to [`4.1.6`](https://github.com/actions/checkout/releases/tag/v4.1.6). ([#11](https://github.com/action-stars/generic-workflows/pull/11)) _@dependabot_
+
 ## [v0.2.0] - 2024-04-15
 
 ### Added
