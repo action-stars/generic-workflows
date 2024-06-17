@@ -14,6 +14,8 @@
 
 ## [UNRELEASED]
 
+## [v0.2.1] - 2024-06-17
+
 ### Changed
 
 - Updated _actions/checkout_ from `4.1.2` to [`4.1.7`](https://github.com/actions/checkout/releases/tag/v4.1.7). ([#11](https://github.com/action-stars/generic-workflows/pull/11) & [#12](https://github.com/action-stars/generic-workflows/pull/12)) _@dependabot_
@@ -43,6 +45,7 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.2.0...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.2.1...HEAD
+[v0.2.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.2.1
 [v0.2.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.2.0
 [v0.1.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.1.0
