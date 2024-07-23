@@ -9,8 +9,6 @@ on:
         required: false
         default: 7
 
-permissions: read-all
-
 jobs:
   scorecard:
     name: Scorecard Analysis

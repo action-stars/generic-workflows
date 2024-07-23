@@ -24,8 +24,6 @@ on:
         required: false
         default: ""
 
-permissions: read-all
-
 jobs:
   release:
     name: Release
