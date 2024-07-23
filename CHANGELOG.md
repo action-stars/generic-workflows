@@ -14,6 +14,10 @@
 
 ## [UNRELEASED]
 
+### Added
+
+- Added [OpenSSF Scorecard](https://scorecard.dev/) workflow. ([#13](https://github.com/action-stars/generic-workflows/pull/13)) _@stevehipwell_
+
 ## [v0.2.1] - 2024-06-17
 
 ### Changed
