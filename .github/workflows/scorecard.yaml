@@ -16,9 +16,6 @@ jobs:
     permissions:
       id-token: write
       security-events: write
-    defaults:
-      run:
-        shell: bash
 
     steps:
       - name: Checkout
