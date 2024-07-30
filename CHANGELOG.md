@@ -14,6 +14,11 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Updated _ossf/scorecard-action_ from `2.3.3` to [`2.4.0`](https://github.com/ossf/scorecard-action/releases/tag/v2.4.0). ([#14](https://github.com/action-stars/generic-workflows/pull/14)) _@dependabot_
+- Updated _github/codeql-action_ from `3.25.13` to [`3.25.15`](https://github.com/github/codeql-action/releases/tag/v3.25.15). ([#14](https://github.com/action-stars/generic-workflows/pull/14)) _@dependabot_
+
 ## [v0.3.0] - 2024-07-23
 
 ### Added
