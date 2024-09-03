@@ -14,6 +14,11 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Updated _github/codeql-action_ from `3.25.5` to [`3.26.6`](https://github.com/github/codeql-action/releases/tag/v3.26.6). ([#19](https://github.com/action-stars/generic-workflows/pull/19)) _@dependabot_
+- Updated _actions/upload-artifact_ from `4.3.6` to [`4.4.0`](https://github.com/actions/upload-artifact/releases/tag/v4.4.0). ([#19](https://github.com/action-stars/generic-workflows/pull/19)) _@dependabot_
+
 ## [v0.3.1] - 2024-08-27
 
 ### Changed
