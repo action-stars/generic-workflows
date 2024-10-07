@@ -14,10 +14,13 @@
 
 ## [UNRELEASED]
 
+## [v0.3.2] - 2024-10-07
+
 ### Changed
 
-- Updated _github/codeql-action_ from `3.25.5` to [`3.26.6`](https://github.com/github/codeql-action/releases/tag/v3.26.6). ([#19](https://github.com/action-stars/generic-workflows/pull/19)) _@dependabot_
+- Updated _github/codeql-action_ from `3.25.5` to [`3.26.10`](https://github.com/github/codeql-action/releases/tag/v3.26.10). ([#19](https://github.com/action-stars/generic-workflows/pull/19) & [#22](https://github.com/action-stars/generic-workflows/pull/22)) _@dependabot_
 - Updated _actions/upload-artifact_ from `4.3.6` to [`4.4.0`](https://github.com/actions/upload-artifact/releases/tag/v4.4.0). ([#19](https://github.com/action-stars/generic-workflows/pull/19)) _@dependabot_
+- Updated _actions/checkout_ from `4.1.7` to [`4.2.0`](https://github.com/actions/checkout/releases/tag/v4.2.0). ([#22](https://github.com/action-stars/generic-workflows/pull/22)) _@dependabot_
 
 ## [v0.3.1] - 2024-08-27
 
@@ -64,7 +67,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.3.1...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.3.2...HEAD
+[v0.3.2]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.2
 [v0.3.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.1
 [v0.3.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.0
 [v0.2.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.2.1
