@@ -14,6 +14,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Updated _github/codeql-action_ from `3.27.0` to [`3.27.1`](https://github.com/github/codeql-action/releases/tag/v3.27.1). ([#26](https://github.com/action-stars/generic-workflows/pull/26)) _@dependabot_
+
 ## [v0.3.4] - 2024-10-28
 
 ### Changed
