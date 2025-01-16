@@ -14,6 +14,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Changed release action to [softprops/action-gh-release](https://github.com/softprops/action-gh-release).([#33](https://github.com/action-stars/generic-workflows/pull/33)) _@stevehipwell_
+
 ## [v0.3.6] - 2025-01-16
 
 ### Changed
