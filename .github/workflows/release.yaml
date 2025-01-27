@@ -18,8 +18,18 @@ on:
         type: boolean
         required: false
         default: true
+      body:
+        description: The release body.
+        type: string
+        required: false
+        default: ""
+      release_notes_mode:
+        description: The release notes mode; can be one of none, changelog or commits.
+        type: string
+        required: false
+        default: none
       artifacts:
-        description: Comma seperated list of artifact path to be uploaded to the release; this supports globs.
+        description: New line separated list of artifact path to be uploaded to the release; this supports globs.
         type: string
         required: false
         default: ""
@@ -41,32 +51,44 @@ jobs:
           fetch-depth: 1
 
       - name: Get changelog entry
+        if: ${{ inputs.release_notes_mode == 'changelog' }}
         id: changelog
         uses: mindsers/changelog-reader-action@32aa5b4c155d76c94e4ec883a223c947b2f02656 # v2.2.3
         with:
           path: ${{ inputs.changelog_path }}
           version: ${{ inputs.version }}
 
-      - name: Release notes
-        id: release_notes
+      - name: Configure
+        id: configure
         run: |
           set -euo pipefail
 
-          changes='${{ steps.changelog.outputs.changes }}'
+          body_file="$(mktemp)"
 
-          changelog="$(echo "${changes}" | sed -r 's/\[(@[^]]+)\]\([^)]+\)/\1/g')"
+          cat <<EOF > "${body_file}"
+          ${{ inputs.body }}
+          EOF
+
+          if [[ "${{ inputs.release_notes_mode }}" == "changelog" ]]; then
+            printf '## What's Changed\n\n' >> "${body_file}"
+
+            changes="$(cat <<EOF
+          ${{ steps.changelog.outputs.changes }}
+          EOF
+          )"
+
+            sed -r 's/\[(@[^]]+)\]\([^)]+\)/\1/g' <<< "${changes}" >> "${body_file}"
+          fi
 
           {
-            echo "changelog<<EOF"
-            echo "${changelog}"
-            echo "EOF"
+            echo "body_path=${body_file}"
           } >> "${GITHUB_OUTPUT}"
 
       - name: Create release
-        uses: ncipollo/release-action@cdcc88a9acf3ca41c16c37bb7d21b9ad48560d87 # v1.15.0
+        uses: softprops/action-gh-release@7b4da11513bf3f43f9999e90eabced41ab8bb048 # v2.2.0
         with:
           token: ${{ github.token }}
-          makeLatest: ${{ inputs.make_latest }}
-          allowUpdates: true
-          body: ${{ steps.release_notes.outputs.changelog }}
-          artifacts: ${{ inputs.artifacts }}
+          make_latest: ${{ inputs.make_latest }}
+          files: ${{ inputs.artifacts }}
+          body_path: ${{ steps.configure.outputs.body_path }}
+          generate_release_notes: ${{ inputs.release_notes_mode == 'commits' }}
