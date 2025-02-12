@@ -16,7 +16,7 @@
 
 ### Changed
 
-- Updated _github/codeql-action_ from `3.28.1` to [`3.28.8`](https://github.com/github/codeql-action/releases/tag/v3.28.8). ([#34](https://github.com/action-stars/generic-workflows/pull/34) & [#35](https://github.com/action-stars/generic-workflows/pull/35)) _@dependabot_
+- Updated _github/codeql-action_ from `3.28.1` to [`3.28.9`](https://github.com/github/codeql-action/releases/tag/v3.28.9). ([#34](https://github.com/action-stars/generic-workflows/pull/34), [#35](https://github.com/action-stars/generic-workflows/pull/35) & [#36](https://github.com/action-stars/generic-workflows/pull/36)) _@dependabot_
 
 ## [v0.3.6] - 2025-01-16
 
