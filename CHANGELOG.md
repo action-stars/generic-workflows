@@ -14,9 +14,14 @@
 
 ## [UNRELEASED]
 
+## [v0.4.0] - 2025-02-26
+
 ### Changed
 
-- Updated _github/codeql-action_ from `3.28.1` to [`3.28.9`](https://github.com/github/codeql-action/releases/tag/v3.28.9). ([#34](https://github.com/action-stars/generic-workflows/pull/34), [#35](https://github.com/action-stars/generic-workflows/pull/35) & [#36](https://github.com/action-stars/generic-workflows/pull/36)) _@dependabot_
+- Updated _github/codeql-action_ from `3.28.1` to [`3.28.10`](https://github.com/github/codeql-action/releases/tag/v3.28.10). ([#34](https://github.com/action-stars/generic-workflows/pull/34), [#35](https://github.com/action-stars/generic-workflows/pull/35), [#36](https://github.com/action-stars/generic-workflows/pull/36) & [#37](https://github.com/action-stars/generic-workflows/pull/37)) _@dependabot_
+- Updated _ncipollo/release-action_ from `1.15.0` to [1.16.0](https://github.com/ncipollo/release-action/releases/tag/v1.16.0). ([#37](https://github.com/action-stars/generic-workflows/pull/37)) _@dependabot_
+- Updated _ossf/scorecard-action_ from `2.4.0` to [`2.4.1`](https://github.com/ossf/scorecard-action/releases/tag/v2.4.1). ([#37](https://github.com/action-stars/generic-workflows/pull/37)) _@dependabot_
+- Updated _actions/upload-artifact_ from `4.6.0` to [`4.6.1`](https://github.com/actions/upload-artifact/releases/tag/v4.6.1). ([#37](https://github.com/action-stars/generic-workflows/pull/37)) _@dependabot_
 
 ## [v0.3.6] - 2025-01-16
 
@@ -101,7 +106,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.3.6...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.4.0...HEAD
+[v0.4.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.4.0
 [v0.3.6]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.6
 [v0.3.5]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.5
 [v0.3.4]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.4
