@@ -1,4 +1,4 @@
-name: GH Reusable Workflow Publish Release
+name: Publish Release
 
 on:
   workflow_call:

@@ -1,4 +1,4 @@
-name: GH Reusable Workflow OSSF Scorecard
+name: OSSF Scorecard
 
 on:
   workflow_call:
