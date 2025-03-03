@@ -1,0 +1,121 @@
+name: Validate GitHub Workflows
+
+on:
+  workflow_call:
+    inputs:
+      auto_doc:
+        description: If auto-doc should be run.
+        type: boolean
+        required: false
+        default: false
+      markdownlint:
+        description: If markdownlint should be run.
+        type: boolean
+        required: false
+        default: false
+      shellcheck:
+        description: If shellcheck should be run.
+        type: boolean
+        required: false
+        default: false
+      yamlfmt:
+        description: If yamlfmt should be run.
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Install actionlint
+        uses: action-stars/install-tool-from-github-release@ece2623611b240002e0dd73a0d685505733122f6 # v0.2.4
+        with:
+          github_token: ${{ github.token }}
+          owner: rhysd
+          repository: actionlint
+          check_command: actionlint -version
+          version: latest
+
+      - name: Run actionlint
+        run: actionlint -shellcheck=shellcheck
+
+      - name: Install auto-doc
+        uses: action-stars/install-tool-from-github-release@ece2623611b240002e0dd73a0d685505733122f6 # v0.2.4
+        if: inputs.auto_doc
+        with:
+          github_token: ${{ github.token }}
+          owner: tj-actions
+          repository: auto-doc
+          arch_amd64: x86_64
+          os_linux: Linux
+          check_command: auto-doc --help
+          version: latest
+
+      - name: Run auto-doc check
+        if: inputs.auto_doc
+        run: |
+          set -euo pipefail
+
+          find ./.github/workflows -maxdepth 1 -name '*.yaml' ! -name '_*' -print0 | while read -r -d $'\0' file; do
+            name="$(basename "${file}" .yaml)"
+
+            tmp_readme="$(mktemp)"
+            printf '## Inputs\n## Outputs' >"${tmp_readme}"
+            auto-doc --colMaxWords 100 --repository ${{ github.repository }} --reusable --filename "${file}" --output "${tmp_readme}"
+            sed -i 's/## /### /g' "${tmp_readme}"
+
+            sed -i -e "/MERGE:START:${name}/,/MERGE:END:${name}/c\<!-- MERGE:START:${name} - Do not remove or modify this section -->\n\n<!-- MERGE:END:${name} - Do not remove or modify this section -->" ./README.md
+            sed -i "/MERGE:START:${name}/r ${tmp_readme}" ./README.md
+
+            rm -f "${tmp_readme}"
+          done
+
+          if [[ -n "$(git status --porcelain --untracked-files=no)" ]]
+          then
+            echo "Documentation not up to date; please run auto-doc and commit changes!" >&2
+            exit 1
+          fi
+
+      - name: Install yamlfmt
+        uses: action-stars/install-tool-from-github-release@ece2623611b240002e0dd73a0d685505733122f6 # v0.2.4
+        if: inputs.yamlfmt
+        with:
+          github_token: ${{ github.token }}
+          owner: google
+          repository: yamlfmt
+          arch_amd64: x86_64
+          os_linux: Linux
+          check_command: yamlfmt -version
+          version: latest
+
+      - name: Run yamlfmt check
+        if: inputs.yamlfmt
+        run: |
+          set -euo pipefail
+
+          yamlfmt -lint .
+
+      - name: Run shellcheck
+        if: inputs.shellcheck
+        run: |
+          set -euo pipefail
+
+          # shellcheck disable=SC2038
+          find . -type f -name "*.sh" | xargs --no-run-if-empty -n1 shellcheck
+
+      - name: Run markdownlint check
+        uses: DavidAnson/markdownlint-cli2-action@05f32210e84442804257b2a6f20b273450ec8265 # v19.1.0
+        if: inputs.markdownlint

@@ -1,0 +1,110 @@
+name: Validate GitHub Action
+
+on:
+  workflow_call:
+    inputs:
+      auto_doc:
+        description: If auto-doc should be run.
+        type: boolean
+        required: false
+        default: false
+      markdownlint:
+        description: If markdownlint should be run.
+        type: boolean
+        required: false
+        default: false
+      shellcheck:
+        description: If shellcheck should be run.
+        type: boolean
+        required: false
+        default: false
+      yamlfmt:
+        description: If yamlfmt should be run.
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Setup
+        id: setup
+        run: |
+          set -euo pipefail
+
+          if [[ -f "./action.yaml" ]]; then
+            echo "action_file=./action.yaml" >> "${GITHUB_OUTPUT}"
+          elif [[ -f "./action.yml" ]]; then
+            echo "action_file=./action.yml" >> "${GITHUB_OUTPUT}"
+          else
+            echo "::Error::No action file found."
+            exit 1
+          fi
+
+      - name: Install auto-doc
+        uses: action-stars/install-tool-from-github-release@ece2623611b240002e0dd73a0d685505733122f6 # v0.2.4
+        if: inputs.auto_doc
+        with:
+          github_token: ${{ github.token }}
+          owner: tj-actions
+          repository: auto-doc
+          arch_amd64: x86_64
+          os_linux: Linux
+          check_command: auto-doc --help
+          version: latest
+
+      - name: Run auto-doc check
+        if: inputs.auto_doc
+        run: |
+          set -euo pipefail
+
+          auto-doc --colMaxWords 100 --repository ${{ github.repository }} --filename "${{ steps.setup.outputs.action_file }}"
+          if [[ -n "$(git status --porcelain --untracked-files=no)" ]]
+          then
+            echo "Documentation not up to date; please run auto-doc and commit changes!" >&2
+            exit 1
+          fi
+
+      - name: Install yamlfmt
+        uses: action-stars/install-tool-from-github-release@ece2623611b240002e0dd73a0d685505733122f6 # v0.2.4
+        if: inputs.yamlfmt
+        with:
+          github_token: ${{ github.token }}
+          owner: google
+          repository: yamlfmt
+          arch_amd64: x86_64
+          os_linux: Linux
+          check_command: yamlfmt -version
+          version: latest
+
+      - name: Run yamlfmt check
+        if: inputs.yamlfmt
+        run: |
+          set -euo pipefail
+
+          yamlfmt -lint .
+
+      - name: Run shellcheck
+        if: inputs.shellcheck
+        run: |
+          set -euo pipefail
+
+          # shellcheck disable=SC2038
+          find . -type f -name "*.sh" | xargs --no-run-if-empty -n1 shellcheck
+
+      - name: Run markdownlint check
+        uses: DavidAnson/markdownlint-cli2-action@05f32210e84442804257b2a6f20b273450ec8265 # v19.1.0
+        if: inputs.markdownlint

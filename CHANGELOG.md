@@ -1,5 +1,6 @@
 # Action Stars Generic Workflows for GitHub Actions Changelog
 
+<!-- markdownlint-disable-next-line MD052 -->
 > [!NOTE]
 > All notable changes to this project will be documented in this file; the format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -13,6 +14,10 @@
 -->
 
 ## [UNRELEASED]
+
+### Added
+
+- Added _Validate GitHub Action_ & _Validate GitHub Workflows_ workflows. ([#38](https://github.com/action-stars/generic-workflows/pull/38)) _@stevehipwell_
 
 ## [v0.4.0] - 2025-02-26
 
