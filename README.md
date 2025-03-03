@@ -1,5 +1,8 @@
 # Action Stars Generic Workflows for GitHub Actions
 
+![GitHub Release (latest SemVer)](https://img.shields.io/github/v/release/action-stars/generic-workflows?sort=semver)
+![Validate](https://github.com/action-stars/generic-workflows/actions/workflows/_validate.yaml/badge.svg?branch=main)
+
 ## Publish Release Workflow
 
 This GitHub Actions workflow publishes a release.
@@ -9,12 +12,12 @@ This GitHub Actions workflow publishes a release.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|     INPUT      |  TYPE   | REQUIRED |          DEFAULT           |                                        DESCRIPTION                                        |
-|----------------|---------|----------|----------------------------|-------------------------------------------------------------------------------------------|
-|   artifacts    | string  |  false   |                            | Comma separated list of artifact path to be uploaded to the release; this supports globs. |
-| changelog_path | string  |  false   |     `"./CHANGELOG.md"`     |      Path to the CHANGELOG file; this needs to follow the Keep a Changelog pattern.       |
-|  make_latest   | boolean |  false   |           `true`           |                      Whether to make the release the latest release.                      |
-|    version     | string  |  false   | `"${{ github.ref_name }}"` |                                The version to be released.                                |
+| INPUT          | TYPE    | REQUIRED | DEFAULT                    | DESCRIPTION                                                                               |
+| -------------- | ------- | -------- | -------------------------- | ----------------------------------------------------------------------------------------- |
+| artifacts      | string  | false    |                            | Comma separated list of artifact path to be uploaded to the release; this supports globs. |
+| changelog_path | string  | false    | `"./CHANGELOG.md"`         | Path to the CHANGELOG file; this needs to follow the Keep a Changelog pattern.            |
+| make_latest    | boolean | false    | `true`                     | Whether to make the release the latest release.                                           |
+| version        | string  | false    | `"${{ github.ref_name }}"` | The version to be released.                                                               |
 
 <!-- AUTO-DOC-INPUT:END -->
 ### Outputs
@@ -33,9 +36,9 @@ This GitHub Actions workflow runs the OSSF Scorecard.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|     INPUT      |  TYPE  | REQUIRED | DEFAULT |                   DESCRIPTION                    |
-|----------------|--------|----------|---------|--------------------------------------------------|
-| retention_days | number |  false   |   `7`   | Number of days to retain the scorecard artifact. |
+| INPUT          | TYPE   | REQUIRED | DEFAULT | DESCRIPTION                                      |
+| -------------- | ------ | -------- | ------- | ------------------------------------------------ |
+| retention_days | number | false    | `7`     | Number of days to retain the scorecard artifact. |
 
 <!-- AUTO-DOC-INPUT:END -->
 ### Outputs
@@ -54,12 +57,12 @@ This workflow validates the GitHub Action in the repository.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|    INPUT     |  TYPE   | REQUIRED | DEFAULT |          DESCRIPTION           |
-|--------------|---------|----------|---------|--------------------------------|
-|   auto_doc   | boolean |  false   | `false` |   If auto-doc should be run.   |
-| markdownlint | boolean |  false   | `false` | If markdownlint should be run. |
-|  shellcheck  | boolean |  false   | `false` |  If shellcheck should be run.  |
-|   yamlfmt    | boolean |  false   | `false` |   If yamlfmt should be run.    |
+| INPUT        | TYPE    | REQUIRED | DEFAULT | DESCRIPTION                    |
+| ------------ | ------- | -------- | ------- | ------------------------------ |
+| auto_doc     | boolean | false    | `false` | If auto-doc should be run.     |
+| markdownlint | boolean | false    | `false` | If markdownlint should be run. |
+| shellcheck   | boolean | false    | `false` | If shellcheck should be run.   |
+| yamlfmt      | boolean | false    | `false` | If yamlfmt should be run.      |
 
 <!-- AUTO-DOC-INPUT:END -->
 ### Outputs
@@ -78,12 +81,12 @@ This workflow validates the GitHub Workflows in the repository.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|    INPUT     |  TYPE   | REQUIRED | DEFAULT |          DESCRIPTION           |
-|--------------|---------|----------|---------|--------------------------------|
-|   auto_doc   | boolean |  false   | `false` |   If auto-doc should be run.   |
-| markdownlint | boolean |  false   | `false` | If markdownlint should be run. |
-|  shellcheck  | boolean |  false   | `false` |  If shellcheck should be run.  |
-|   yamlfmt    | boolean |  false   | `false` |   If yamlfmt should be run.    |
+| INPUT        | TYPE    | REQUIRED | DEFAULT | DESCRIPTION                    |
+| ------------ | ------- | -------- | ------- | ------------------------------ |
+| auto_doc     | boolean | false    | `false` | If auto-doc should be run.     |
+| markdownlint | boolean | false    | `false` | If markdownlint should be run. |
+| shellcheck   | boolean | false    | `false` | If shellcheck should be run.   |
+| yamlfmt      | boolean | false    | `false` | If yamlfmt should be run.      |
 
 <!-- AUTO-DOC-INPUT:END -->
 ### Outputs

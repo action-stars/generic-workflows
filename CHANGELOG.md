@@ -15,6 +15,8 @@
 
 ## [UNRELEASED]
 
+## [v0.5.0] - 2025-03-03
+
 ### Added
 
 - Added _Validate GitHub Action_ & _Validate GitHub Workflows_ workflows. ([#38](https://github.com/action-stars/generic-workflows/pull/38)) _@stevehipwell_
@@ -111,7 +113,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.4.0...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.5.0...HEAD
+[v0.5.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.0
 [v0.4.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.4.0
 [v0.3.6]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.6
 [v0.3.5]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.5
