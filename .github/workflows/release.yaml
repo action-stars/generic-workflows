@@ -19,7 +19,7 @@ on:
         required: false
         default: true
       artifacts:
-        description: Comma seperated list of artifact path to be uploaded to the release; this supports globs.
+        description: Comma separated list of artifact path to be uploaded to the release; this supports globs.
         type: string
         required: false
         default: ""

@@ -1,0 +1,22 @@
+name: Validate
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: pr-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: read-all
+
+jobs:
+  workflow:
+    name: Workflow
+    uses: ./.github/workflows/validate-gh-workflows.yaml
+    with:
+      auto_doc: true
+      markdownlint: true
+      shellcheck: true
+      yamlfmt: true
