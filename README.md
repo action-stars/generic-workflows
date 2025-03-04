@@ -81,12 +81,13 @@ This workflow validates the GitHub Workflows in the repository.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|    INPUT     |  TYPE   | REQUIRED | DEFAULT |          DESCRIPTION           |
-|--------------|---------|----------|---------|--------------------------------|
-|   auto_doc   | boolean |  false   | `false` |   If auto-doc should be run.   |
-| markdownlint | boolean |  false   | `false` | If markdownlint should be run. |
-|  shellcheck  | boolean |  false   | `false` |  If shellcheck should be run.  |
-|   yamlfmt    | boolean |  false   | `false` |   If yamlfmt should be run.    |
+|      INPUT      |  TYPE   | REQUIRED | DEFAULT |          DESCRIPTION           |
+|-----------------|---------|----------|---------|--------------------------------|
+|    auto_doc     | boolean |  false   | `false` |   If auto-doc should be run.   |
+| auto_doc_script | string  |  false   |         |  The script to run auto-doc.   |
+|  markdownlint   | boolean |  false   | `false` | If markdownlint should be run. |
+|   shellcheck    | boolean |  false   | `false` |  If shellcheck should be run.  |
+|     yamlfmt     | boolean |  false   | `false` |   If yamlfmt should be run.    |
 
 <!-- AUTO-DOC-INPUT:END -->
 ### Outputs

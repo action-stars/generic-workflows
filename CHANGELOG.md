@@ -15,6 +15,14 @@
 
 ## [UNRELEASED]
 
+### Added
+
+- Added ability to use a custom `auto-doc` script. ([#39](https://github.com/action-stars/generic-workflows/pull/39)) _@stevehipwell_
+
+### Fixed
+
+- Fixed mangling of `||` by `auto-doc`. ([#39](https://github.com/action-stars/generic-workflows/pull/39)) _@stevehipwell_
+
 ## [v0.5.0] - 2025-03-03
 
 ### Added
