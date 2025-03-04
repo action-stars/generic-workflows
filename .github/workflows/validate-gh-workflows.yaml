@@ -8,6 +8,10 @@ on:
         type: boolean
         required: false
         default: false
+      auto_doc_script:
+        description: The script to run auto-doc.
+        type: string
+        required: false
       markdownlint:
         description: If markdownlint should be run.
         type: boolean
@@ -69,19 +73,27 @@ jobs:
         run: |
           set -euo pipefail
 
-          find ./.github/workflows -maxdepth 1 -name '*.yaml' ! -name '_*' -print0 | while read -r -d $'\0' file; do
-            name="$(basename "${file}" .yaml)"
+          auto_doc_script="${{ inputs.auto_doc_script }}"
 
-            tmp_readme="$(mktemp)"
-            printf '## Inputs\n## Outputs' >"${tmp_readme}"
-            auto-doc --colMaxWords 100 --repository ${{ github.repository }} --reusable --filename "${file}" --output "${tmp_readme}"
-            sed -i 's/## /### /g' "${tmp_readme}"
+          if [[ -n "${auto_doc_script}" ]]; then
+            ${auto_doc_script}
+          else
+            find ./.github/workflows -maxdepth 1 -name '*.yaml' ! -name '_*' -print0 | while read -r -d $'\0' file; do
+              name="$(basename "${file}" .yaml)"
 
-            sed -i -e "/MERGE:START:${name}/,/MERGE:END:${name}/c\<!-- MERGE:START:${name} - Do not remove or modify this section -->\n\n<!-- MERGE:END:${name} - Do not remove or modify this section -->" ./README.md
-            sed -i "/MERGE:START:${name}/r ${tmp_readme}" ./README.md
+              tmp_readme="$(mktemp)"
+              printf '## Inputs\n## Outputs' >"${tmp_readme}"
+              auto-doc --colMaxWords 100 --repository ${{ github.repository }} --reusable --filename "${file}" --output "${tmp_readme}"
+              sed -i 's/## /### /g' "${tmp_readme}"
+              sed -i 's/||/\\|\\|/g' "${tmp_readme}"
+              sed -i 's/"\\|"/\\|/g' "${tmp_readme}"
 
-            rm -f "${tmp_readme}"
-          done
+              sed -i -e "/MERGE:START:${name}/,/MERGE:END:${name}/c\<!-- MERGE:START:${name} - Do not remove or modify this section -->\n\n<!-- MERGE:END:${name} - Do not remove or modify this section -->" ./README.md
+              sed -i "/MERGE:START:${name}/r ${tmp_readme}" ./README.md
+
+              rm -f "${tmp_readme}"
+            done
+          fi
 
           if [[ -n "$(git status --porcelain --untracked-files=no)" ]]
           then
