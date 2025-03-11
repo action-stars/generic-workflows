@@ -15,6 +15,8 @@
 
 ## [UNRELEASED]
 
+## [v0.5.1] - 2025-03-1
+
 ### Added
 
 - Added ability to use a custom `auto-doc` script. ([#39](https://github.com/action-stars/generic-workflows/pull/39)) _@stevehipwell_
@@ -22,6 +24,7 @@
 ### Changed
 
 - Removed value column from workflows outputs documentation. ([#40](https://github.com/action-stars/generic-workflows/pull/40)) _@stevehipwell_
+- Updated _github/codeql-action_ from `3.28.10` to [`3.28.11`](https://github.com/github/codeql-action/releases/tag/v3.28.11). ([#40](https://github.com/action-stars/generic-workflows/pull/40)) _@dependabot_
 
 ### Fixed
 
@@ -125,7 +128,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.5.0...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.5.1...HEAD
+[v0.5.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.1
 [v0.5.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.0
 [v0.4.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.4.0
 [v0.3.6]: https://github.com/action-stars/generic-workflows/releases/tag/v0.3.6
