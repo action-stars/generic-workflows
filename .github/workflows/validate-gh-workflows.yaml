@@ -83,7 +83,7 @@ jobs:
 
               tmp_readme="$(mktemp)"
               printf '## Inputs\n## Outputs' >"${tmp_readme}"
-              auto-doc --colMaxWords 100 --repository ${{ github.repository }} --reusable --filename "${file}" --output "${tmp_readme}"
+              auto-doc --colMaxWords 100 --repository ${{ github.repository }} --reusable --reusableOutputColumns "Output" --reusableOutputColumns "Description" --filename "${file}" --output "${tmp_readme}"
               sed -i 's/## /### /g' "${tmp_readme}"
               sed -i 's/||/\\|\\|/g' "${tmp_readme}"
               sed -i 's/"\\|"/\\|/g' "${tmp_readme}"
