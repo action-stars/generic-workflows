@@ -19,6 +19,10 @@
 
 - Added ability to use a custom `auto-doc` script. ([#39](https://github.com/action-stars/generic-workflows/pull/39)) _@stevehipwell_
 
+### Changed
+
+- Removed value column from workflows outputs documentation. ([#40](https://github.com/action-stars/generic-workflows/pull/40)) _@stevehipwell_
+
 ### Fixed
 
 - Fixed mangling of `||` by `auto-doc`. ([#39](https://github.com/action-stars/generic-workflows/pull/39)) _@stevehipwell_
