@@ -20,6 +20,10 @@
 - Updated _github/codeql-action_ from `3.28.11` to [`3.28.13`](https://github.com/github/codeql-action/releases/tag/v3.28.13). ([#42](https://github.com/action-stars/generic-workflows/pull/42)) _@dependabot_
 - Updated _actions/upload-artifact_ from `4.6.1` to [`4.6.2`](https://github.com/actions/upload-artifact/releases/tag/v4.6.2). ([#42](https://github.com/action-stars/generic-workflows/pull/42)) _@dependabot_
 
+### Fixed
+
+- Fix escaping of changelog characters. ([#43](https://github.com/action-stars/generic-workflows/pull/43)) _@stevehipwell_
+
 ## [v0.5.1] - 2025-03-1
 
 ### Added

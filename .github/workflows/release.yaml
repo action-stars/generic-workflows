@@ -52,7 +52,11 @@ jobs:
         run: |
           set -euo pipefail
 
-          changes='${{ steps.changelog.outputs.changes }}'
+          changes="$(
+          cat <<'EOF'
+          ${{ steps.changelog.outputs.changes }}
+          EOF
+          )"
 
           changelog="$(echo "${changes}" | sed -r 's/\[(@[^]]+)\]\([^)]+\)/\1/g')"
 
