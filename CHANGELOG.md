@@ -15,6 +15,12 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _DavidAnson/markdownlint-cli2-action_ from `19.1.0` to [`20.0.0`](https://github.com/DavidAnson/markdownlint-cli2-action/releases/tag/v20.0.0). ([#50](https://github.com/action-stars/generic-workflows/pull/50)) _@dependabot_
+- Update _ossf/scorecard-action_ from `2.4.1` to [`2.4.2`](https://github.com/ossf/scorecard-action/releases/tag/v2.4.2). ([#51](https://github.com/action-stars/generic-workflows/pull/51)) _@dependabot_
+- Update _github/codeql-action_ from `3.28.17` to [`3.28.18`](https://github.com/github/codeql-action/releases/tag/v3.28.18). ([#51](https://github.com/action-stars/generic-workflows/pull/51)) _@dependabot_
+
 ## [v0.5.3] - 2025-05-13
 
 ### Changed
