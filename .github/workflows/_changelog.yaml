@@ -2,7 +2,7 @@ name: Dependabot Changelog Entry
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened, reopened, synchronize, labeled]
     branches: [main]
 
 permissions: read-all
@@ -10,7 +10,7 @@ permissions: read-all
 jobs:
   changelog:
     name: Changelog
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]' && contains( github.event.pull_request.labels.*.name, 'dependabot/changelog')
     runs-on: ubuntu-latest
     permissions:
       contents: read
