@@ -35,5 +35,5 @@ jobs:
           commit-message: "chore: Update changelog for Dependabot"
           changelog: ./CHANGELOG.md
           section-header: "### Changes"
-          changelog-entry-pattern: "Update _[dep]_ from `[old]` to `[new]`. ([pr-link]) _@dependabot_"
+          changelog-entry-pattern: "Update _[dep]_ from [old] to [new]. ([pr-link]) _@dependabot_"
           push-changes: true
