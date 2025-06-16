@@ -10,7 +10,7 @@ permissions: read-all
 jobs:
   changelog:
     name: Changelog
-    if: contains(github.event.pull_request.labels.*.name, 'dependabot/changelog')
+    if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     permissions:
       contents: read
