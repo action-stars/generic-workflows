@@ -15,6 +15,8 @@
 
 ## [UNRELEASED]
 
+## [v0.6.0] - 2025-06-30
+
 ### Added
 
 - Add _Dependabot_ changelog workflow. ([#53](https://github.com/action-stars/generic-workflows/pull/53)) _@stevehipwell_
@@ -24,9 +26,9 @@
 - Update _DavidAnson/markdownlint-cli2-action_ from `19.1.0` to [`20.0.0`](https://github.com/DavidAnson/markdownlint-cli2-action/releases/tag/v20.0.0). ([#50](https://github.com/action-stars/generic-workflows/pull/50)) _@dependabot_
 - Update _ossf/scorecard-action_ from `2.4.1` to [`2.4.2`](https://github.com/ossf/scorecard-action/releases/tag/v2.4.2). ([#51](https://github.com/action-stars/generic-workflows/pull/51)) _@dependabot_
 - Update _github/codeql-action_ from `3.28.17` to [`3.28.18`](https://github.com/github/codeql-action/releases/tag/v3.28.18). ([#51](https://github.com/action-stars/generic-workflows/pull/51)) _@dependabot_
-- Update `github/codeql-action` from `3.28.19` to `3.29.0`. ([#52](https://github.com/action-stars/generic-workflows/pull/52)) _@dependabot_
-- Update _ncipollo/release-action_ from `1.16.0` to `1.18.0`. ([#54](https://github.com/action-stars/generic-workflows/pull/54)) _@dependabot_
-- Update _github/codeql-action_ from `3.29.0` to `3.29.1`. ([#54](https://github.com/action-stars/generic-workflows/pull/54)) _@dependabot_
+- Update `github/codeql-action` from `3.28.19` to [`3.29.0`](https://github.com/github/codeql-action/releases/tag/v3.29.0). ([#52](https://github.com/action-stars/generic-workflows/pull/52)) _@dependabot_
+- Update _ncipollo/release-action_ from `1.16.0` to [`1.18.0`](https://github.com/ncipollo/release-action/releases/tag/v1.18.0). ([#54](https://github.com/action-stars/generic-workflows/pull/54)) _@dependabot_
+- Update _github/codeql-action_ from `3.29.0` to [`3.29.1`](https://github.com/github/codeql-action/releases/tag/v3.29.1). ([#54](https://github.com/action-stars/generic-workflows/pull/54)) _@dependabot_
 
 ## [v0.5.3] - 2025-05-13
 
@@ -162,7 +164,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.5.3...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.6.0...HEAD
+[v0.6.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.6.0
 [v0.5.3]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.3
 [v0.5.2]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.2
 [v0.5.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.1
