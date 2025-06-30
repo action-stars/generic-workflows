@@ -1,0 +1,36 @@
+name: Dependabot Changelog
+
+on:
+  workflow_call:
+
+jobs:
+  changelog:
+    name: Changelog
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 1
+      - uses: octo-sts/action@210248e8ae1ae1550aa6e232c6f192b3ccbf7335
+        id: sts
+        with:
+          scope: ${{ github.repository}}
+          identity: actions-pr
+      - name: Changelog
+        uses: crambl/dependabot-changelog-writer@a4b6e4aa40aa3d07139e5090a2748eb1f1c7671c # v1.3.0
+        with:
+          push-token: ${{ steps.sts.outputs.token }}
+          duplicate-entry-strategy: append
+          commit-message: "chore: Update changelog for Dependabot"
+          changelog: ./CHANGELOG.md
+          section-header: "Changed"
+          changelog-entry-pattern: "Update _[dep]_ from `[old]` to `[new]`. ([pr-link]) _@dependabot_"
+          push-changes: true
