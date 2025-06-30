@@ -15,6 +15,10 @@
 
 ## [UNRELEASED]
 
+### Added
+
+- Add _Dependabot_ changelog workflow. ([#53](https://github.com/action-stars/generic-workflows/pull/53)) _@stevehipwell_
+
 ### Changed
 
 - Update _DavidAnson/markdownlint-cli2-action_ from `19.1.0` to [`20.0.0`](https://github.com/DavidAnson/markdownlint-cli2-action/releases/tag/v20.0.0). ([#50](https://github.com/action-stars/generic-workflows/pull/50)) _@dependabot_
