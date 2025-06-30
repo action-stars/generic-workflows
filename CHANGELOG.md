@@ -25,6 +25,8 @@
 - Update _ossf/scorecard-action_ from `2.4.1` to [`2.4.2`](https://github.com/ossf/scorecard-action/releases/tag/v2.4.2). ([#51](https://github.com/action-stars/generic-workflows/pull/51)) _@dependabot_
 - Update _github/codeql-action_ from `3.28.17` to [`3.28.18`](https://github.com/github/codeql-action/releases/tag/v3.28.18). ([#51](https://github.com/action-stars/generic-workflows/pull/51)) _@dependabot_
 - Update `github/codeql-action` from `3.28.19` to `3.29.0`. ([#52](https://github.com/action-stars/generic-workflows/pull/52)) _@dependabot_
+- Update _ncipollo/release-action_ from `1.16.0` to `1.18.0`. ([#54](https://github.com/action-stars/generic-workflows/pull/54)) _@dependabot_
+- Update _github/codeql-action_ from `3.29.0` to `3.29.1`. ([#54](https://github.com/action-stars/generic-workflows/pull/54)) _@dependabot_
 
 ## [v0.5.3] - 2025-05-13
 
