@@ -12,4 +12,5 @@ jobs:
     name: Workflow
     uses: ./.github/workflows/dependabot-changelog.yaml
     permissions:
-      contents: write
+      contents: read
+      id-token: write
