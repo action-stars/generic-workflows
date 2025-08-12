@@ -20,6 +20,7 @@
 - Update _github/codeql-action_ from `3.29.1` to `3.29.2`. ([#55](https://github.com/action-stars/generic-workflows/pull/55)) _@dependabot_
 - Update _github/codeql-action_ from `3.29.2` to `3.29.4`. ([#56](https://github.com/action-stars/generic-workflows/pull/56)) _@dependabot_
 - Update _[actions/checkout](https://github.com/actions/checkout)_ from `4.2.2` to `5.0.0`. ([#58](https://github.com/action-stars/generic-workflows/pull/58)) _@dependabot_
+- Update _github/codeql-action_ from `3.29.7` to `3.29.8`. ([#57](https://github.com/action-stars/generic-workflows/pull/57)) _@dependabot_
 
 ## [v0.6.0] - 2025-06-30
 
