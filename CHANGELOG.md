@@ -15,6 +15,8 @@
 
 ## [UNRELEASED]
 
+## [v0.7.0] - 2025-08-12
+
 ### Changed
 
 - Update _github/codeql-action_ from `3.29.1` to `3.29.2`. ([#55](https://github.com/action-stars/generic-workflows/pull/55)) _@dependabot_
@@ -171,7 +173,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.6.0...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.0...HEAD
+[v0.7.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.0
 [v0.6.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.6.0
 [v0.5.3]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.3
 [v0.5.2]: https://github.com/action-stars/generic-workflows/releases/tag/v0.5.2
