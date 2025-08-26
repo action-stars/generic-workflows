@@ -18,6 +18,7 @@
 ### Changed
 
 - Update _github/codeql-action_ from `3.29.9` to `3.29.10`. ([#59](https://github.com/action-stars/generic-workflows/pull/59)) _@dependabot_
+- Update _[octo-sts/action](https://github.com/octo-sts/action)_ from `210248e8ae1ae1550aa6e232c6f192b3ccbf7335` to `bc99912863e5d0ca5cb08f77804c9922a088265f`. ([#61](https://github.com/action-stars/generic-workflows/pull/61)) _@dependabot_
 
 ## [v0.7.0] - 2025-08-12
 
