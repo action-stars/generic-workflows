@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           fetch-depth: 1
-      - uses: octo-sts/action@210248e8ae1ae1550aa6e232c6f192b3ccbf7335
+      - uses: octo-sts/action@bc99912863e5d0ca5cb08f77804c9922a088265f
         id: sts
         with:
           scope: ${{ github.repository}}
