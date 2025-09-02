@@ -18,6 +18,8 @@
 ### Changed
 
 - Update _github/codeql-action_ from `3.29.9` to `3.29.10`. ([#59](https://github.com/action-stars/generic-workflows/pull/59)) _@dependabot_
+- Update _ncipollo/release-action_ from `1.18.0` to `1.19.1`. ([#62](https://github.com/action-stars/generic-workflows/pull/62)) _@dependabot_
+- Update _github/codeql-action_ from `3.29.10` to `3.30.0`. ([#62](https://github.com/action-stars/generic-workflows/pull/62)) _@dependabot_
 
 ## [v0.7.0] - 2025-08-12
 
