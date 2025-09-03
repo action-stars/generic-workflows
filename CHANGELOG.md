@@ -15,6 +15,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _ncipollo/release-action_ from `1.19.1` to `1.20.0`. ([#64](https://github.com/action-stars/generic-workflows/pull/64)) _@dependabot_
+
 ## [v0.7.1] - 2025-09-03
 
 ### Changed
