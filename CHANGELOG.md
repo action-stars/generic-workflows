@@ -15,6 +15,8 @@
 
 ## [UNRELEASED]
 
+## [v0.7.2] - 2025-09-29
+
 ### Changed
 
 - Update _ncipollo/release-action_ from `1.19.1` to `1.20.0`. ([#64](https://github.com/action-stars/generic-workflows/pull/64)) _@dependabot_
@@ -191,7 +193,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.1...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.2...HEAD
+[v0.7.2]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.2
 [v0.7.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.1
 [v0.7.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.0
 [v0.6.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.6.0
