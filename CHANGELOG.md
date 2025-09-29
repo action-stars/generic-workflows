@@ -21,6 +21,8 @@
 - Update _github/codeql-action_ from `3.30.0` to `3.30.1`. ([#65](https://github.com/action-stars/generic-workflows/pull/65)) _@dependabot_
 - Update _crambl/dependabot-changelog-writer_ from `1.3.0` to `1.3.1`. ([#67](https://github.com/action-stars/generic-workflows/pull/67)) _@dependabot_
 - Update _github/codeql-action_ from `3.30.1` to `3.30.3`. ([#67](https://github.com/action-stars/generic-workflows/pull/67)) _@dependabot_
+- Update _octo-sts/action_ from `1.0.1` to `1.0.2`. ([#68](https://github.com/action-stars/generic-workflows/pull/68)) _@dependabot_
+- Update _github/codeql-action_ from `3.30.3` to `3.30.5`. ([#68](https://github.com/action-stars/generic-workflows/pull/68)) _@dependabot_
 
 ## [v0.7.1] - 2025-09-03
 
