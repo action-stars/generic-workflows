@@ -15,6 +15,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _ossf/scorecard-action_ from `2.4.2` to `2.4.3`. ([#70](https://github.com/action-stars/generic-workflows/pull/70)) _@dependabot_
+
 ## [v0.7.2] - 2025-09-29
 
 ### Changed
