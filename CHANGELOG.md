@@ -15,6 +15,11 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _octo-sts/action_ from `1.0.2` to `1.0.3`. ([#71](https://github.com/action-stars/generic-workflows/pull/71)) _@dependabot_
+- Update _ossf/scorecard-action_ from `2.4.2` to `2.4.3`. ([#71](https://github.com/action-stars/generic-workflows/pull/71)) _@dependabot_
+
 ## [v0.7.2] - 2025-09-29
 
 ### Changed
