@@ -55,7 +55,7 @@ jobs:
           fi
 
       - name: Install auto-doc
-        uses: action-stars/install-tool-from-github-release@f2e83e089fa618aa7e9fd3452fbcf4fe1598ede2 # v0.2.5
+        uses: action-stars/install-tool-from-github-release@1fa61c3bea52eca3bcdb1f5c961a3b113fe7fa54 # v0.2.6
         if: inputs.auto_doc
         with:
           github_token: ${{ github.token }}
@@ -79,7 +79,7 @@ jobs:
           fi
 
       - name: Install yamlfmt
-        uses: action-stars/install-tool-from-github-release@f2e83e089fa618aa7e9fd3452fbcf4fe1598ede2 # v0.2.5
+        uses: action-stars/install-tool-from-github-release@1fa61c3bea52eca3bcdb1f5c961a3b113fe7fa54 # v0.2.6
         if: inputs.yamlfmt
         with:
           github_token: ${{ github.token }}
