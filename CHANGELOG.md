@@ -15,6 +15,13 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _the github-actions group with 3 updates in the / directory: [octo-sts/action](https://github.com/octo-sts/action), [ossf/scorecard-action](https://github.com/ossf/scorecard-action) and [action-stars/install-tool-_ from `-github-release](https://github.com/action-stars/install-` to `ol-from-github-release)`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
+- Update _octo-sts/action_ from `1.0.2` to `1.0.3`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
+- Update _ossf/scorecard-action_ from `2.4.2` to `2.4.3`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
+- Update _action-stars/install-tool-_ from `-github-release` from 0.2.5` to `0.2.6`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
+
 ## [v0.7.2] - 2025-09-29
 
 ### Changed
