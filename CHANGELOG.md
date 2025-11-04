@@ -22,6 +22,7 @@
 - Update _ossf/scorecard-action_ from `2.4.2` to `2.4.3`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
 - Update _action-stars/install-tool-_ from `-github-release` from 0.2.5` to `0.2.6`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
 - Update _[actions/upload-artifact](https://github.com/actions/upload-artifact)_ from `4.6.2` to `5.0.0`. ([#73](https://github.com/action-stars/generic-workflows/pull/73)) _@dependabot_
+- Update _[github/codeql-action](https://github.com/github/codeql-action)_ from `3.30.5` to `4.31.2`. ([#74](https://github.com/action-stars/generic-workflows/pull/74)) _@dependabot_
 
 ## [v0.7.2] - 2025-09-29
 
