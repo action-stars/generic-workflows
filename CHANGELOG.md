@@ -15,12 +15,13 @@
 
 ## [UNRELEASED]
 
+## [v0.7.3] - 2025-11-04
+
 ### Changed
 
-- Update _the github-actions group with 3 updates in the / directory: [octo-sts/action](https://github.com/octo-sts/action), [ossf/scorecard-action](https://github.com/ossf/scorecard-action) and [action-stars/install-tool-_ from `-github-release](https://github.com/action-stars/install-` to `ol-from-github-release)`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
 - Update _octo-sts/action_ from `1.0.2` to `1.0.3`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
 - Update _ossf/scorecard-action_ from `2.4.2` to `2.4.3`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
-- Update _action-stars/install-tool-_ from `-github-release` from 0.2.5` to `0.2.6`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
+- Update _action-stars/install-tool-from-github-release_ from `0.2.5` to `0.2.6`. ([#72](https://github.com/action-stars/generic-workflows/pull/72)) _@dependabot_
 - Update _[actions/upload-artifact](https://github.com/actions/upload-artifact)_ from `4.6.2` to `5.0.0`. ([#73](https://github.com/action-stars/generic-workflows/pull/73)) _@dependabot_
 - Update _[github/codeql-action](https://github.com/github/codeql-action)_ from `3.30.5` to `4.31.2`. ([#74](https://github.com/action-stars/generic-workflows/pull/74)) _@dependabot_
 
@@ -202,7 +203,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.2...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.3...HEAD
+[v0.7.3]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.3
 [v0.7.2]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.2
 [v0.7.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.1
 [v0.7.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.0
