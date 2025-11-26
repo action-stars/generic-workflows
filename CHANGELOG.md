@@ -15,6 +15,8 @@
 
 ## [UNRELEASED]
 
+## [v0.7.4] - 2025-11-26
+
 ### Changed
 
 - Update _[DavidAnson/markdownlint-cli2-action](https://github.com/davidanson/markdownlint-cli2-action)_ from `20.0.0` to `21.0.0`. ([#76](https://github.com/action-stars/generic-workflows/pull/76)) _@dependabot_
@@ -209,7 +211,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.3...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.4...HEAD
+[v0.7.4]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.4
 [v0.7.3]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.3
 [v0.7.2]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.2
 [v0.7.1]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.1
