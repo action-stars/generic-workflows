@@ -15,6 +15,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _github/codeql-action_ from `4.31.5` to `4.31.6`. ([#79](https://github.com/action-stars/generic-workflows/pull/79)) _@dependabot_
+
 ## [v0.7.4] - 2025-11-26
 
 ### Changed
