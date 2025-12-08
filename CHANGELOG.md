@@ -15,6 +15,12 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _actions/checkout_ from `6.0.0` to `6.0.1`. ([#80](https://github.com/action-stars/generic-workflows/pull/80)) _@dependabot_
+- Update _octo-sts/action_ from `1.0.3` to `1.1.1`. ([#80](https://github.com/action-stars/generic-workflows/pull/80)) _@dependabot_
+- Update _github/codeql-action_ from `4.31.5` to `4.31.7`. ([#80](https://github.com/action-stars/generic-workflows/pull/80)) _@dependabot_
+
 ## [v0.7.4] - 2025-11-26
 
 ### Changed
