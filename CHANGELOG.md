@@ -21,6 +21,7 @@
 - Update _octo-sts/action_ from `1.0.3` to `1.1.1`. ([#80](https://github.com/action-stars/generic-workflows/pull/80)) _@dependabot_
 - Update _github/codeql-action_ from `4.31.5` to `4.31.7`. ([#80](https://github.com/action-stars/generic-workflows/pull/80)) _@dependabot_
 - Update _[DavidAnson/markdownlint-cli2-action](https://github.com/davidanson/markdownlint-cli2-action)_ from `21.0.0` to `22.0.0`. ([#82](https://github.com/action-stars/generic-workflows/pull/82)) _@dependabot_
+- Update _github/codeql-action_ from `4.31.7` to `4.31.9`. ([#81](https://github.com/action-stars/generic-workflows/pull/81)) _@dependabot_
 
 ## [v0.7.4] - 2025-11-26
 
