@@ -12,11 +12,6 @@ on:
         description: The script to run auto-doc.
         type: string
         required: false
-      markdownlint:
-        description: If markdownlint should be run.
-        type: boolean
-        required: false
-        default: false
       shellcheck:
         description: If shellcheck should be run.
         type: boolean
@@ -24,6 +19,16 @@ on:
         default: false
       yamlfmt:
         description: If yamlfmt should be run.
+        type: boolean
+        required: false
+        default: false
+      rumdl:
+        description: If rumdl should be run.
+        type: boolean
+        required: false
+        default: false
+      markdownlint:
+        description: DEPRECATED - If markdownlint should be run.
         type: boolean
         required: false
         default: false
@@ -82,7 +87,7 @@ jobs:
               name="$(basename "${file}" .yaml)"
 
               tmp_readme="$(mktemp)"
-              printf '## Inputs\n## Outputs' >"${tmp_readme}"
+              printf '## Secrets\n\n## Inputs\n\n## Outputs' >"${tmp_readme}"
               auto-doc --colMaxWords 100 --repository ${{ github.repository }} --reusable --reusableOutputColumns "Output" --reusableOutputColumns "Description" --filename "${file}" --output "${tmp_readme}"
               sed -i 's/## /### /g' "${tmp_readme}"
               sed -i 's/||/\\|\\|/g' "${tmp_readme}"

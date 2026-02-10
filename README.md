@@ -8,11 +8,18 @@
 This GitHub Actions workflow generates a changelog for Dependabot.
 
 <!-- MERGE:START:dependabot-changelog - Do not remove or modify this section -->
+### Secrets
+
+<!-- AUTO-DOC-SECRETS:START - Do not remove or modify this section -->
+No secrets.
+<!-- AUTO-DOC-SECRETS:END -->
+
 ### Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 No inputs.
 <!-- AUTO-DOC-INPUT:END -->
+
 ### Outputs
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
@@ -25,6 +32,12 @@ No outputs.
 This GitHub Actions workflow publishes a release.
 
 <!-- MERGE:START:release - Do not remove or modify this section -->
+### Secrets
+
+<!-- AUTO-DOC-SECRETS:START - Do not remove or modify this section -->
+No secrets.
+<!-- AUTO-DOC-SECRETS:END -->
+
 ### Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
@@ -37,6 +50,7 @@ This GitHub Actions workflow publishes a release.
 |    version     | string  |  false   | `"${{ github.ref_name }}"` |                                The version to be released.                                |
 
 <!-- AUTO-DOC-INPUT:END -->
+
 ### Outputs
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
@@ -49,6 +63,12 @@ No outputs.
 This GitHub Actions workflow runs the OSSF Scorecard.
 
 <!-- MERGE:START:scorecard - Do not remove or modify this section -->
+### Secrets
+
+<!-- AUTO-DOC-SECRETS:START - Do not remove or modify this section -->
+No secrets.
+<!-- AUTO-DOC-SECRETS:END -->
+
 ### Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
@@ -58,6 +78,7 @@ This GitHub Actions workflow runs the OSSF Scorecard.
 | retention_days | number |  false   |   `7`   | Number of days to retain the scorecard artifact. |
 
 <!-- AUTO-DOC-INPUT:END -->
+
 ### Outputs
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
@@ -70,18 +91,26 @@ No outputs.
 This workflow validates the GitHub Action in the repository.
 
 <!-- MERGE:START:validate-gh-action - Do not remove or modify this section -->
+### Secrets
+
+<!-- AUTO-DOC-SECRETS:START - Do not remove or modify this section -->
+No secrets.
+<!-- AUTO-DOC-SECRETS:END -->
+
 ### Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|    INPUT     |  TYPE   | REQUIRED | DEFAULT |          DESCRIPTION           |
-|--------------|---------|----------|---------|--------------------------------|
-|   auto_doc   | boolean |  false   | `false` |   If auto-doc should be run.   |
-| markdownlint | boolean |  false   | `false` | If markdownlint should be run. |
-|  shellcheck  | boolean |  false   | `false` |  If shellcheck should be run.  |
-|   yamlfmt    | boolean |  false   | `false` |   If yamlfmt should be run.    |
+|    INPUT     |  TYPE   | REQUIRED | DEFAULT |                 DESCRIPTION                 |
+|--------------|---------|----------|---------|---------------------------------------------|
+|   auto_doc   | boolean |  false   | `false` |         If auto-doc should be run.          |
+| markdownlint | boolean |  false   | `false` | DEPRECATED - If markdownlint should be run. |
+|    rumdl     | boolean |  false   | `false` |           If rumdl should be run.           |
+|  shellcheck  | boolean |  false   | `false` |        If shellcheck should be run.         |
+|   yamlfmt    | boolean |  false   | `false` |          If yamlfmt should be run.          |
 
 <!-- AUTO-DOC-INPUT:END -->
+
 ### Outputs
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
@@ -94,19 +123,27 @@ No outputs.
 This workflow validates the GitHub Workflows in the repository.
 
 <!-- MERGE:START:validate-gh-workflows - Do not remove or modify this section -->
+### Secrets
+
+<!-- AUTO-DOC-SECRETS:START - Do not remove or modify this section -->
+No secrets.
+<!-- AUTO-DOC-SECRETS:END -->
+
 ### Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|      INPUT      |  TYPE   | REQUIRED | DEFAULT |          DESCRIPTION           |
-|-----------------|---------|----------|---------|--------------------------------|
-|    auto_doc     | boolean |  false   | `false` |   If auto-doc should be run.   |
-| auto_doc_script | string  |  false   |         |  The script to run auto-doc.   |
-|  markdownlint   | boolean |  false   | `false` | If markdownlint should be run. |
-|   shellcheck    | boolean |  false   | `false` |  If shellcheck should be run.  |
-|     yamlfmt     | boolean |  false   | `false` |   If yamlfmt should be run.    |
+|      INPUT      |  TYPE   | REQUIRED | DEFAULT |                 DESCRIPTION                 |
+|-----------------|---------|----------|---------|---------------------------------------------|
+|    auto_doc     | boolean |  false   | `false` |         If auto-doc should be run.          |
+| auto_doc_script | string  |  false   |         |         The script to run auto-doc.         |
+|  markdownlint   | boolean |  false   | `false` | DEPRECATED - If markdownlint should be run. |
+|      rumdl      | boolean |  false   | `false` |           If rumdl should be run.           |
+|   shellcheck    | boolean |  false   | `false` |        If shellcheck should be run.         |
+|     yamlfmt     | boolean |  false   | `false` |          If yamlfmt should be run.          |
 
 <!-- AUTO-DOC-INPUT:END -->
+
 ### Outputs
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->

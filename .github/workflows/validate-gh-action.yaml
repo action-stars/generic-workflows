@@ -8,11 +8,6 @@ on:
         type: boolean
         required: false
         default: false
-      markdownlint:
-        description: If markdownlint should be run.
-        type: boolean
-        required: false
-        default: false
       shellcheck:
         description: If shellcheck should be run.
         type: boolean
@@ -20,6 +15,16 @@ on:
         default: false
       yamlfmt:
         description: If yamlfmt should be run.
+        type: boolean
+        required: false
+        default: false
+      rumdl:
+        description: If rumdl should be run.
+        type: boolean
+        required: false
+        default: false
+      markdownlint:
+        description: DEPRECATED - If markdownlint should be run.
         type: boolean
         required: false
         default: false
