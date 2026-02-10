@@ -23,6 +23,8 @@
 - Update _[DavidAnson/markdownlint-cli2-action](https://github.com/davidanson/markdownlint-cli2-action)_ from `21.0.0` to `22.0.0`. ([#82](https://github.com/action-stars/generic-workflows/pull/82)) _@dependabot_
 - Update _github/codeql-action_ from `4.31.7` to `4.31.9`. ([#81](https://github.com/action-stars/generic-workflows/pull/81)) _@dependabot_
 - Update _[actions/upload-artifact](https://github.com/actions/upload-artifact)_ from `5.0.0` to `6.0.0`. ([#83](https://github.com/action-stars/generic-workflows/pull/83)) _@dependabot_
+- Update _actions/checkout_ from `6.0.1` to `6.0.2`. ([#84](https://github.com/action-stars/generic-workflows/pull/84)) _@dependabot_
+- Update _github/codeql-action_ from `4.31.10` to `4.31.11`. ([#84](https://github.com/action-stars/generic-workflows/pull/84)) _@dependabot_
 
 ## [v0.7.4] - 2025-11-26
 
