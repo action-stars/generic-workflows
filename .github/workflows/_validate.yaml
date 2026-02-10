@@ -20,6 +20,6 @@ jobs:
     uses: ./.github/workflows/validate-gh-workflows.yaml
     with:
       auto_doc: true
-      markdownlint: true
       shellcheck: true
       yamlfmt: true
+      rumdl: true

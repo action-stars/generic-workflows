@@ -15,6 +15,12 @@
 
 ## [UNRELEASED]
 
+## [v0.8.0] - 2026-02-10
+
+### Added
+
+- Add support to lint markdown with [rumdl](https://github.com/rvben/rumdl) via the new `rumdl` input. ([#85](https://github.com/action-stars/generic-workflows/pull/85)) _@stevehipwell_
+
 ### Changed
 
 - Update _actions/checkout_ from `6.0.0` to `6.0.1`. ([#80](https://github.com/action-stars/generic-workflows/pull/80)) _@dependabot_
@@ -222,7 +228,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.7.4...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.8.0...HEAD
+[v0.8.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.8.0
 [v0.7.4]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.4
 [v0.7.3]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.3
 [v0.7.2]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.2

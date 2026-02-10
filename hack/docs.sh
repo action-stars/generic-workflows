@@ -7,7 +7,7 @@ find ./.github/workflows -maxdepth 1 -name '*.yaml' ! -name '_*' -print0 | while
   name="$(basename "${file}" .yaml)"
 
   tmp_readme="$(mktemp)"
-  printf '## Inputs\n## Outputs' >"${tmp_readme}"
+  printf '## Secrets\n\n## Inputs\n\n## Outputs' >"${tmp_readme}"
   auto-doc --colMaxWords 100 --repository "${repository}" --reusable --reusableOutputColumns "Output" --reusableOutputColumns "Description" --filename "${file}" --output "${tmp_readme}"
   sed -i 's/## /### /g' "${tmp_readme}"
   sed -i 's/||/\\|\\|/g' "${tmp_readme}"
