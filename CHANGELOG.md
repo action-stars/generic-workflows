@@ -15,6 +15,11 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _ncipollo/release-action_ from `1.20.0` to `1.21.0`. ([#87](https://github.com/action-stars/generic-workflows/pull/87)) _@dependabot_
+- Update _github/codeql-action_ from `4.31.11` to `4.33.0`. ([#87](https://github.com/action-stars/generic-workflows/pull/87)) _@dependabot_
+
 ## [v0.8.0] - 2026-02-10
 
 ### Added
