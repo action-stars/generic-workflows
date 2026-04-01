@@ -20,6 +20,7 @@
 - Update _ncipollo/release-action_ from `1.20.0` to `1.21.0`. ([#87](https://github.com/action-stars/generic-workflows/pull/87)) _@dependabot_
 - Update _github/codeql-action_ from `4.31.11` to `4.33.0`. ([#87](https://github.com/action-stars/generic-workflows/pull/87)) _@dependabot_
 - Update _[DavidAnson/markdownlint-cli2-action](https://github.com/davidanson/markdownlint-cli2-action)_ from `22.0.0` to `23.0.0`. ([#88](https://github.com/action-stars/generic-workflows/pull/88)) _@dependabot_
+- Update _[actions/upload-artifact](https://github.com/actions/upload-artifact)_ from `6.0.0` to `7.0.0`. ([#89](https://github.com/action-stars/generic-workflows/pull/89)) _@dependabot_
 
 ## [v0.8.0] - 2026-02-10
 
