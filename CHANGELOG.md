@@ -15,6 +15,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _actions/upload-artifact_ from `7.0.0` to `7.0.1`. ([#90](https://github.com/action-stars/generic-workflows/pull/90)) _@dependabot_
+
 ## [v0.9.0] - 2026-04-01
 
 ### Changed
