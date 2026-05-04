@@ -15,6 +15,12 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _github/codeql-action_ from `4.35.1` to `4.35.3`. ([#92](https://github.com/action-stars/generic-workflows/pull/92)) _@dependabot_
+- Update _actions/upload-artifact_ from `7.0.0` to `7.0.1`. ([#92](https://github.com/action-stars/generic-workflows/pull/92)) _@dependabot_
+- Update _DavidAnson/markdownlint-cli2-action_ from `23.0.0` to `23.1.0`. ([#92](https://github.com/action-stars/generic-workflows/pull/92)) _@dependabot_
+
 ## [v0.9.0] - 2026-04-01
 
 ### Changed
