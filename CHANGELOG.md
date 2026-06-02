@@ -15,6 +15,14 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _actions/checkout_ from `6.0.2` to `6.0.3`. ([#94](https://github.com/action-stars/generic-workflows/pull/94)) _@dependabot_
+- Update _mindsers/changelog-reader-action_ from `2.2.3` to `2.4.0`. ([#94](https://github.com/action-stars/generic-workflows/pull/94)) _@dependabot_
+- Update _github/codeql-action_ from `4.35.1` to `4.36.1`. ([#94](https://github.com/action-stars/generic-workflows/pull/94)) _@dependabot_
+- Update _actions/upload-artifact_ from `7.0.0` to `7.0.1`. ([#94](https://github.com/action-stars/generic-workflows/pull/94)) _@dependabot_
+- Update _DavidAnson/markdownlint-cli2-action_ from `23.0.0` to `23.2.0`. ([#94](https://github.com/action-stars/generic-workflows/pull/94)) _@dependabot_
+
 ## [v0.9.0] - 2026-04-01
 
 ### Changed
