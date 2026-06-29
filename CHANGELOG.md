@@ -15,6 +15,13 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _mindsers/changelog-reader-action_ from `2.2.3` to `2.4.0`. ([#96](https://github.com/action-stars/generic-workflows/pull/96)) _@dependabot_
+- Update _github/codeql-action/upload-sarif_ from `4.35.1` to `4.36.2`. ([#96](https://github.com/action-stars/generic-workflows/pull/96)) _@dependabot_
+- Update _actions/upload-artifact_ from `7.0.0` to `7.0.1`. ([#96](https://github.com/action-stars/generic-workflows/pull/96)) _@dependabot_
+- Update _DavidAnson/markdownlint-cli2-action_ from `23.0.0` to `23.2.0`. ([#96](https://github.com/action-stars/generic-workflows/pull/96)) _@dependabot_
+
 ## [v0.9.0] - 2026-04-01
 
 ### Changed
