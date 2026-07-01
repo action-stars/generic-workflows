@@ -59,17 +59,20 @@ jobs:
             exit 1
           fi
 
-      - name: Install auto-doc
-        uses: action-stars/install-tool-from-github-release@1fa61c3bea52eca3bcdb1f5c961a3b113fe7fa54 # v0.2.6
-        if: inputs.auto_doc
+      - name: Install ghactl
+        uses: action-stars/ghactl-action@c556c5f2cfcb1f6643bdecf1bf601c706954a37a # v0.0.1
         with:
-          github_token: ${{ github.token }}
-          owner: tj-actions
-          repository: auto-doc
-          arch_amd64: x86_64
-          os_linux: Linux
-          check_command: auto-doc --help
+          token: ${{ github.token }}
           version: latest
+
+      - name: Install tools
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          ghactl tool install --owner tj-actions --repo auto-doc --version latest
+          ghactl tool install --owner google --repo yamlfmt --version latest
 
       - name: Run auto-doc check
         if: inputs.auto_doc
@@ -82,18 +85,6 @@ jobs:
             echo "Documentation not up to date; please run auto-doc and commit changes!" >&2
             exit 1
           fi
-
-      - name: Install yamlfmt
-        uses: action-stars/install-tool-from-github-release@1fa61c3bea52eca3bcdb1f5c961a3b113fe7fa54 # v0.2.6
-        if: inputs.yamlfmt
-        with:
-          github_token: ${{ github.token }}
-          owner: google
-          repository: yamlfmt
-          arch_amd64: x86_64
-          os_linux: Linux
-          check_command: yamlfmt -version
-          version: latest
 
       - name: Run yamlfmt check
         if: inputs.yamlfmt

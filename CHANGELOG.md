@@ -15,6 +15,13 @@
 
 ## [UNRELEASED]
 
+## [v0.11.0] - 2026-07-01
+
+### Changed
+
+- Use [action-stars/ghactl-action](https://github.com/action-stars/ghactl-action) ([`ghactl`](https://github.com/action-stars/ghactl)) for installing tools from GitHub releases. ([#98](https://github.com/action-stars/generic-workflows/pull/98)) @stevehipwell
+- Update _Dependabot_ changelog formatting to no longer italicize the `@dependabot` username. ([#98](https://github.com/action-stars/generic-workflows/pull/98)) @stevehipwell
+
 ## [v0.10.0] - 2026-07-01
 
 ### Changed
@@ -247,7 +254,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.10.0...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.11.0...HEAD
+[v0.11.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.11.0
 [v0.10.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.10.0
 [v0.9.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.9.0
 [v0.8.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.8.0
