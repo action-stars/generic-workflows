@@ -15,6 +15,8 @@
 
 ## [UNRELEASED]
 
+## [v0.10.0] - 2026-07-01
+
 ### Changed
 
 - Update _mindsers/changelog-reader-action_ from `2.2.3` to `2.4.0`. ([#96](https://github.com/action-stars/generic-workflows/pull/96)) _@dependabot_
@@ -245,7 +247,8 @@
 <!--
 RELEASES
 -->
-[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.9.0...HEAD
+[UNRELEASED]: https://github.com/action-stars/generic-workflows/compare/v0.10.0...HEAD
+[v0.10.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.10.0
 [v0.9.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.9.0
 [v0.8.0]: https://github.com/action-stars/generic-workflows/releases/tag/v0.8.0
 [v0.7.4]: https://github.com/action-stars/generic-workflows/releases/tag/v0.7.4
