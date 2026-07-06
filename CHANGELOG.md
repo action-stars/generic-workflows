@@ -15,6 +15,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _[DavidAnson/markdownlint-cli2-action](https://github.com/davidanson/markdownlint-cli2-action)_ from `23.2.0` to `24.0.0`. ([#100](https://github.com/action-stars/generic-workflows/pull/100)) @dependabot
+
 ## [v0.11.0] - 2026-07-01
 
 ### Changed
