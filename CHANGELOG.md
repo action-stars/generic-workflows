@@ -15,6 +15,10 @@
 
 ## [UNRELEASED]
 
+### Changed
+
+- Update _github/codeql-action/upload-sarif_ from `4.36.2` to `4.36.3`. ([#99](https://github.com/action-stars/generic-workflows/pull/99)) @dependabot
+
 ## [v0.11.0] - 2026-07-01
 
 ### Changed
