@@ -42,12 +42,15 @@ No secrets.
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|     INPUT      |  TYPE   | REQUIRED |          DEFAULT           |                                        DESCRIPTION                                        |
-|----------------|---------|----------|----------------------------|-------------------------------------------------------------------------------------------|
-|   artifacts    | string  |  false   |                            | Comma separated list of artifact path to be uploaded to the release; this supports globs. |
-| changelog_path | string  |  false   |     `"./CHANGELOG.md"`     |      Path to the CHANGELOG file; this needs to follow the Keep a Changelog pattern.       |
-|  make_latest   | boolean |  false   |           `true`           |                      Whether to make the release the latest release.                      |
-|    version     | string  |  false   | `"${{ github.ref_name }}"` |                                The version to be released.                                |
+|         INPUT          |  TYPE   | REQUIRED |          DEFAULT           |                                                        DESCRIPTION                                                         |
+|------------------------|---------|----------|----------------------------|----------------------------------------------------------------------------------------------------------------------------|
+|       artifacts        | string  |  false   |                            |                 Comma separated list of artifact path to be uploaded to the release; this supports globs.                  |
+|     changelog_path     | string  |  false   |     `"./CHANGELOG.md"`     | Path to the CHANGELOG file used if `generate_release_notes` is `false`; this needs to follow the Keep a Changelog pattern. |
+| generate_release_notes | boolean |  false   |           `true`           |                                  Whether to generate release notes or use the changelog.                                   |
+|       immutable        | boolean |  false   |          `false`           |                                          Whether the release should be immutable.                                          |
+|      make_latest       | boolean |  false   |           `true`           |                                      Whether to make the release the latest release.                                       |
+|          name          | string  |  false   |                            |                                                  The name of the release.                                                  |
+|        version         | string  |  false   | `"${{ github.ref_name }}"` |                                                The version to be released.                                                 |
 
 <!-- AUTO-DOC-INPUT:END -->
 

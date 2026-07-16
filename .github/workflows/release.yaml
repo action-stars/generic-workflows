@@ -3,16 +3,20 @@ name: Publish Release
 on:
   workflow_call:
     inputs:
-      changelog_path:
-        description: Path to the CHANGELOG file; this needs to follow the Keep a Changelog pattern.
-        type: string
-        required: false
-        default: ./CHANGELOG.md
       version:
         description: The version to be released.
         type: string
         required: false
         default: ${{ github.ref_name }}
+      name:
+        description: The name of the release.
+        type: string
+        required: false
+      immutable:
+        description: Whether the release should be immutable.
+        type: boolean
+        required: false
+        default: false
       make_latest:
         description: Whether to make the release the latest release.
         type: boolean
@@ -23,6 +27,16 @@ on:
         type: string
         required: false
         default: ""
+      generate_release_notes:
+        description: Whether to generate release notes or use the changelog.
+        type: boolean
+        required: false
+        default: true
+      changelog_path:
+        description: Path to the CHANGELOG file used if `generate_release_notes` is `false`; this needs to follow the Keep a Changelog pattern.
+        type: string
+        required: false
+        default: ./CHANGELOG.md
 
 jobs:
   release:
@@ -43,34 +57,21 @@ jobs:
       - name: Get changelog entry
         id: changelog
         uses: mindsers/changelog-reader-action@1faaf50aa09d5793d9a100819973df801febfb31 # v2.4.0
+        if: inputs.generate_release_notes == false
         with:
           path: ${{ inputs.changelog_path }}
           version: ${{ inputs.version }}
-
-      - name: Release notes
-        id: release_notes
-        run: |
-          set -euo pipefail
-
-          changes="$(
-          cat <<'EOF'
-          ${{ steps.changelog.outputs.changes }}
-          EOF
-          )"
-
-          changelog="$(echo "${changes}" | sed -r 's/\[(@[^]]+)\]\([^)]+\)/\1/g')"
-
-          {
-            echo "changelog<<EOF"
-            echo "${changelog}"
-            echo "EOF"
-          } >> "${GITHUB_OUTPUT}"
+          validation_level: warn
 
       - name: Create release
         uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         with:
           token: ${{ github.token }}
+          tag: ${{ inputs.version }}
+          name: ${{ inputs.name }}
+          immutableCreate: ${{ inputs.immutable }}
+          allowUpdates: ${{ !inputs.immutable }}
           makeLatest: ${{ inputs.make_latest }}
-          allowUpdates: true
-          body: ${{ steps.release_notes.outputs.changelog }}
+          generateReleaseNotes: ${{ inputs.generate_release_notes }}
+          bodyFile: ${{ case(!inputs.generate_release_notes, steps.changelog.outputs.changes_file, '') }}
           artifacts: ${{ inputs.artifacts }}

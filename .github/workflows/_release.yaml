@@ -13,3 +13,6 @@ jobs:
     uses: ./.github/workflows/release.yaml
     permissions:
       contents: write
+    with:
+      immutable: true
+      generate_release_notes: true
